@@ -1,0 +1,96 @@
+.refreshImageContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.refreshImageContext {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 32px;
+    gap: 32px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 500px;
+    height: 156px;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.refreshDescription {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'kern' off;
+    color: #121212;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0px;
+    gap: 16px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.startOverButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    gap: 10px;
+    background: #C209C1;
+    border: none;
+    border-radius: 16px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.startOverButton:hover {
+    background: #800980;
+}
+
+.cancelButton {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    gap: 10px;
+    opacity: 0.6;
+    border: 2px solid #000000;
+    border-radius: 16px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    cursor: pointer;
+}
+
+.cancelButton:hover {
+    background: rgb(189, 185, 185);
+}

@@ -1,0 +1,267 @@
+.imageModifyingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.miniTools {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top: 10px;
+    right: 50px;
+}
+
+.miniTools>button {
+    border: none;
+    background: transparent;
+    color: #808080;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.miniTools>button:hover {
+    color: #000000;
+}
+
+.redo,
+.undo {
+    font-size: 28px !important;
+}
+
+.processing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+}
+
+.processingText {
+    color: black;
+    margin-bottom: 40px;
+}
+
+.loaderPart {
+    position: relative;
+    width: 210px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/fileProcessing.png");
+}
+
+.designLoader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 27%;
+    height: 19%;
+    background-image:
+        linear-gradient(45deg, #808080 50%, transparent 50%),
+        linear-gradient(-135deg, #F4F5F8 50%, transparent 50%);
+}
+
+.imagePart {
+    display: none;
+}
+
+.imageMirroring {
+    max-width: 780px;
+    max-height: 520px;
+    object-fit: contain;
+}
+
+.imageButtonPart {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imageButtonPart>button {
+    border: none;
+    background: none;
+}
+
+.flipDirection {
+    margin-bottom: 8px;
+}
+
+.flipHorizontal {
+    margin-right: 12px;
+}
+
+.flipHorizontal,
+.flipVertical {
+    width: 12vw;
+    height: 13vh;
+    border: none;
+    color: #4C4C4C;
+    border-radius: 8px;
+    padding: 0;
+    border: 2px solid #E3E3E3;
+    background-color: white;
+}
+
+.flipHorizontal:hover,
+.flipVertical:hover {
+    background: #FAEAFA;
+    border: 2px solid #C209C1;
+}
+
+.imageTools {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.shareImage,
+.downloadImage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    gap: 12px;
+}
+
+.shareImage {
+    padding: 12px 24px;
+    color: #C209C1;
+    border: 1px solid #C209C1;
+    background-color: white;
+}
+
+.downloadImage {
+    padding: 12px 40px;
+    margin-left: 12px;
+    background-color: #C209C1;
+}
+
+.imageSuccess {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    gap: 8px;
+    width: 670px;
+    height: 48px;
+    /* position: absolute;
+    left: 145px;
+    top: 147px; */
+    background: #158380;
+    box-shadow: 0px 4px 16px rgba(17, 18, 54, 0.16);
+    border-radius: 12px;
+    color: #ffffff;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    font-feature-settings: 'kern' off;
+}
+
+.imageSuccess>div>img {
+    display: inline;
+}
+
+.msgPart {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 700px) {
+    .modify {
+        flex-direction: column;
+    }
+
+    .modifyPart {
+        width: 100%;
+        padding: 24px;
+        box-sizing: border-box;
+    }
+
+    .processing {
+        width: 150px;
+        height: initial;
+    }
+
+    .loaderPart {
+        width: 135px;
+        height: 190px;
+    }
+
+    .designLoader {
+        top: 0;
+        right: 0;
+    }
+
+    .imageSuccess {
+        display: flex;
+        justify-content: center;
+    }
+
+    .settingsPart {
+        width: 100%;
+        padding: 16px;
+        height: inherit;
+        box-sizing: border-box;
+    }
+
+    .toolsMenu {
+        height: inherit;
+        align-items: flex-start;
+    }
+
+    .flipHorizontal,
+    .flipVertical {
+        width: 44vw;
+        margin-bottom: 24px;
+    }
+
+    .shareImage,
+    .downloadImage {
+        gap: 8px;
+        padding: 12px 23px;
+        font-weight: 500;
+        justify-content: center;
+    }
+
+    .downloadImage {
+        width: 44vw;
+    }
+
+    .imageMirroring {
+        max-width: 90%;
+        max-height: 520px;
+        object-fit: contain;
+    }
+}
+
+.imageContainer {
+    display: none;
+}
+
+.successIconAndText {
+    display: flex;
+    align-items: center;
+}
+
+
+.successIcon {
+    font-size: 24px;
+    margin-right: 0.5rem;
+}
+
+.closeIcon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.closeIcon:hover {
+    color: #aaa6a6;
+}

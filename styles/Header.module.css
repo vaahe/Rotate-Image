@@ -1,0 +1,117 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 24px;
+}
+
+.leftTools {
+    display: flex;
+    align-items: center;
+}
+
+.headerRightTools {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    width: 200px;
+    height: 40px;
+    flex: none;
+    order: 1;
+    flex-grow: 0
+}
+
+.shareIcon {
+    font-size: 24px;
+    color: #000000;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchBar {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 12px;
+    width: 152px;
+    height: 40px;
+    border: 2px solid #E3E3E3;
+    border-radius: 12px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.searchBar::placeholder {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0 0 0 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'kern' off;
+    color: #4C4C4C;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 16px;
+    right: 0%;
+    top: 8px;
+    bottom: 0%;
+    font-family: 'Picsart-Main-Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'kern' off;
+    color: #4C4C4C;
+}
+
+.navLink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navLink>li {
+    display: flex;
+    align-items: center;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #222222;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0 1rem;
+    list-style: none;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+
+.navLink>li:hover {
+    color: #C209C1;
+}
+
+.arrowDown {
+    margin-left: 0.5rem;
+    color: #C209C1;
+    font-size: 18px;
+}

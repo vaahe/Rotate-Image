@@ -1,0 +1,157 @@
+.deleteImageContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.deleteImageContext {
+    width: 500px;
+    height: 188px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.deleteHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 436px;
+    height: 60px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.deleteHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+    width: 436px;
+    height: 28px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.trashIcon {
+    font-family: 'Picsart-Main-Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-feature-settings: 'kern' off;
+    color: #808080;
+}
+
+.deleteText {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    align-items: center;
+    font-feature-settings: 'kern' off;
+    color: #121212;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+.deleteDescription {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    font-feature-settings: 'kern' off;
+    color: #A0A0A3;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0px;
+    gap: 16px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.cancelButton,
+.deleteButton {
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .1s ease-in;
+}
+
+.cancelButton {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    gap: 10px;
+    width: 79px;
+    height: 32px;
+    opacity: 0.6;
+    border: 2px solid #000000;
+    border-radius: 16px;
+    flex: none;
+    flex-grow: 0;
+
+}
+
+.cancelButton:hover {
+    background: #A0A0A3;
+}
+
+.deleteButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    gap: 10px;
+    width: 76px;
+    height: 32px;
+    background: #C209C1;
+    border: none;
+    border-radius: 16px;
+    color: #FFFFFF;
+    flex: none;
+    flex-grow: 0;
+}
+
+.deleteButton:hover {
+    background: #970c97;
+}

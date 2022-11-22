@@ -1,0 +1,99 @@
+.tools {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 480px;
+    padding: 0 2.5rem 2rem;
+}
+
+.settingsTitle {
+    width: 176px;
+    left: calc(50% - 176px/2 + 368px);
+    top: 9.66%;
+    bottom: 85.22%;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 40px;
+    font-feature-settings: 'kern' off;
+    color: #000000;
+
+}
+
+.settingsSubtitle {
+    width: 39px;
+    height: 16px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    font-feature-settings: 'kern' off;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.shareAndDownloadContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+}
+
+.shareButton {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 8px;
+    width: 194px;
+    height: 56px;
+    border: 1px solid #C209C1;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #ffffff;
+    color: #C209C1;
+}
+
+.downloadButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 8px;
+    width: 194px;
+    height: 56px;
+    background: #C209C1;
+    border-radius: 8px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    border: none;
+    color: #ffffff;
+}
+
+.shareButton:hover {
+    color: #740574;
+    border-color: #740574;
+}
+
+.downloadButton:hover {
+    color: #ffffff;
+    background: #740574;
+    opacity: 1;
+}
+
+.toolIcon {
+    font-size: 26px;
+}
+
+.disableClick {
+    pointer-events: none;
+}

@@ -1,0 +1,6 @@
+.rotateSection {
+    display: flex;
+    justify-content: space-between;
+    background: #e2e2e2;
+    height: 592px;
+}

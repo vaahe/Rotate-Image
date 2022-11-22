@@ -1,0 +1,43 @@
+.warning {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 901px;
+    height: 48px;
+    padding: 0 1rem;
+    background: #F67E0C;
+    box-shadow: 0px 4px 16px rgba(17, 18, 54, 0.16);
+    border-radius: 12px;
+}
+
+.warningIcon {
+    font-size: 24px;
+    margin-right: 0.5rem;
+}
+
+.warningText {
+    display: inline-flex;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    font-feature-settings: 'kern' off;
+    color: #080808;
+}
+
+.tryAgainText {
+    margin-left: 4px;
+    color: #FFFFFF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.tryAgainText:hover {
+    color: rgb(199, 199, 199)
+}
+
+.closeIcon:hover {
+    color: gray;
+}
