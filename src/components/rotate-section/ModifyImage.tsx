@@ -42,7 +42,7 @@ const ModifyImage = ({ data, imgRef }: modifyTypes) => {
         loaderImage.current.style.display = "block";
         setSuccess(true);
       }
-    }, 0);
+    }, 3000);
   }, []);
 
   useEffect(() => {
