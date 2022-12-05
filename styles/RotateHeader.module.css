@@ -1,6 +1,5 @@
 .headerContainer {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 14px 40px;
@@ -17,4 +16,20 @@
 .shareIcon {
     font-size: 24px;
     color: #000000;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .headerContainer {
+        min-width: 130vh;
+        min-height: 20vw;
+    }
+
+    .headerContainer>img {
+        width: 342px;
+        height: 64px;
+    }
+
+    .headerContainer>svg {
+        font-size: 48px;
+    }
 }

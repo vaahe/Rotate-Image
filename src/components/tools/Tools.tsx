@@ -58,29 +58,12 @@ const Tools = ({ data, onRotate, imgRef }: toolsTypes) => {
     }
   });
 
-  useEffect(() => {
-    console.log("Tools.tsx");
-  }, []);
-
   return (
     <div className={styles.tools} ref={toolsRef}>
-      <div>
-        <div className={styles.rotateOptions}>
-          <h2 className={styles.settingsTitle}>Format settings</h2>
-          <p className={styles.settingsSubtitle}>Rotate</p>
-          <RotateImage
-            // customAngle={angle}
-            data={data}
-            onRotate={onRotate}
-            imgRef={imgRef.current}
-          />
-        </div>
-        {/* <CustomAngle
-          setDefault={setDefault}
-          handleChange={handleChange}
-          angle={angle}
-          changeAngle={changeAngle}
-        /> */}
+      <div className={styles.rotateOptions}>
+        <h2 className={styles.settingsTitle}>Format settings</h2>
+        <p className={styles.settingsSubtitle}>Rotate</p>
+        <RotateImage data={data} onRotate={onRotate} imgRef={imgRef.current} />
       </div>
 
       <div className={styles.shareAndDownloadContainer}>

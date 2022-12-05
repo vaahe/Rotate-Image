@@ -86,5 +86,21 @@
 }
 
 .resetButton:hover {
-    text-decoration:underline;
+    text-decoration: underline;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .customAngleContainer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .customAngleAndResetText,
+    .resetButton {
+        font-size: 24px;
+    }
+
+    .numberInput {
+        font-size: 24px;
+    }
 }

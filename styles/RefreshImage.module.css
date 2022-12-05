@@ -94,3 +94,37 @@
 .cancelButton:hover {
     background: rgb(189, 185, 185);
 }
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .refreshImageContainer {
+        height: 300%;
+    }
+
+    .refreshImageContext {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 8rem 0;
+    }
+
+    .refreshDescription {
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttonsContainer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .refreshDescription {
+        font-size: 32px;
+    }
+
+    .buttonsContainer>button {
+        width: 30%;
+        height: 150%;
+        font-size: 24px;
+    }
+}

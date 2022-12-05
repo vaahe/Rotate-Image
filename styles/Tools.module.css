@@ -97,3 +97,29 @@
 .disableClick {
     pointer-events: none;
 }
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .tools {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 130vh;
+        height: 100%;
+    }
+
+    .settingsTitle {
+        width: 100%;
+        font-size: 32px;
+    }
+
+    .settingsSubtitle {
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .shareButton, .downloadButton {
+        width: 50%;
+        min-height: 15vh;
+        font-size: 32px;
+    }
+}

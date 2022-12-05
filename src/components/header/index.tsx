@@ -9,10 +9,28 @@ import styles from "@styles/Header.module.css";
 const Header: NextPage = () => {
   return (
     <nav className={styles.header}>
+      <div className={styles.burgerMenu}>
+        <Image
+          src="/assets/burgerMenu.png"
+          alt="burger menu"
+          width={24}
+          height={24}
+        />
+        <Image
+          src="/assets/quickTool.svg"
+          alt="quick tools"
+          className={styles.logo}
+          width={175}
+          height={42}
+        />
+        <FiShare2 className={styles.shareIcon} />
+      </div>
+
       <div className={styles.leftTools}>
         <Image
-          src="/assets/quickTool.png"
+          src="/assets/quickTool.svg"
           alt="quick tools"
+          className={styles.logo}
           width={175}
           height={42}
         />

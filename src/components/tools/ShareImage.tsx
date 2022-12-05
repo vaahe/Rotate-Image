@@ -13,8 +13,11 @@ import {
 import { shareType } from "src/types/ShareImageTypes";
 import styles from "@styles/ShareImage.module.css";
 import { IoMdCloseCircle } from "react-icons/io";
+import { BsCheck2 } from "react-icons/bs";
+import { CgClose } from "react-icons/cg";
 
 const ShareImage = ({ shareImage }: shareType) => {
+  const [copy, setCopy] = useState<boolean>(false);
   const [image, setImage] = useState<string | null>(null);
   const [link, setLink] = useState<string>(document.location.href);
 
@@ -27,14 +30,16 @@ const ShareImage = ({ shareImage }: shareType) => {
     setImage(imgName);
 
     if (link.length > 26) {
-      setLink(document.location.href.slice(0, 26) + '...');
+      setLink(document.location.href.slice(0, 26) + "...");
     }
   }, []);
 
-  const isCopied = (e: any) => {
+  const isCopied = () => {
+    navigator.clipboard.writeText(document.location.href);
     const shareInput = document.getElementById("shareInput");
     shareInput?.classList.remove("ShareImage_shareInputNotClicked__HHFec");
     shareInput?.classList.add("ShareImage_shareInputIsClicked__bCdXQ");
+    setCopy(true);
   };
 
   return (
@@ -47,6 +52,9 @@ const ShareImage = ({ shareImage }: shareType) => {
             onClick={closeModal}
           />
           <div className={styles.shareText}>
+            <span className={styles.shareDescription}>
+              Share download link or scan QR
+            </span>
             <span className={styles.shareTextTitle}>Share the results</span>
             <span className={styles.shareTextRemainder}>
               Your file will be deleted after 30 days
@@ -67,32 +75,30 @@ const ShareImage = ({ shareImage }: shareType) => {
           <div className={styles.socialMedias}>
             <FacebookShareButton
               url={"https://github.com/next-share"}
-              style={{ marginRight: "16px" }}
+              className={styles.icon}
             >
-              <FacebookIcon size={40} borderRadius={50} color={"black"} />
+              <FacebookIcon
+                size={40}
+                borderRadius={50}
+                className={styles.icon}
+              />
             </FacebookShareButton>
-            <LinkedinShareButton
-              url={"https://github.com/next-share"}
-              style={{ marginRight: "16px" }}
-            >
-              <LinkedinIcon size={40} borderRadius={50} />
+            <LinkedinShareButton url={"https://github.com/next-share"}>
+              <LinkedinIcon
+                size={40}
+                borderRadius={50}
+                className={styles.icon}
+              />
             </LinkedinShareButton>
-            <TwitterShareButton
-              url={"https://github.com/next-share"}
-              style={{ marginRight: "16px" }}
-            >
+            <TwitterShareButton url={"https://github.com/next-share"}>
               <TwitterIcon
                 size={40}
                 borderRadius={50}
-                bgStyle={{ backgroundColor: "rgba(25, 119, 243, 0.1)" }}
+                className={styles.icon}
               />
             </TwitterShareButton>
             <MailruShareButton url={"https://github.com/next-share"}>
-              <MailruIcon
-                size={40}
-                borderRadius={50}
-                bgStyle={{ backgroundColor: "rgba(25, 119, 243, 0.1)" }}
-              />
+              <MailruIcon size={40} borderRadius={50} className={styles.icon} />
             </MailruShareButton>
           </div>
           <div className={styles.qrContainer}>
@@ -100,6 +106,15 @@ const ShareImage = ({ shareImage }: shareType) => {
             <QRCode value={document.location.href} size={120} level="H" />
           </div>
         </div>
+        {copy ? (
+          <div className={styles.copySuccess}>
+            <div className={styles.successIconAndText}>
+              <BsCheck2 className={styles.successIcon} />
+              Link has been copied to clipboard!
+            </div>
+            <CgClose className={styles.closeIcon} onClick={closeModal} />
+          </div>
+        ) : null}
       </div>
     </div>
   );

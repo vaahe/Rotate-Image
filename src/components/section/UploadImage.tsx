@@ -62,12 +62,12 @@ const UploadImage: NextPage = () => {
     <div className={styles.uploadContainer}>
       <div className={styles.imageAndDescription}>
         <Image
-          src={"/assets/descriptionImage.png"}
+          src={"/assets/descriptionImage.svg"}
           alt="description image"
           width={158.36}
           height={122.26}
         />
-        <div>
+        <div className={styles.descriptions}>
           <p className={styles.descriptionHeader}>
             Rotate image in a few clicks
           </p>
@@ -85,7 +85,7 @@ const UploadImage: NextPage = () => {
         onDragEnter={onDragEnter}
         onDragLeave={onDragLeave}
       >
-        Upload an image or drop it here
+        Upload an image or drop it here.
         <label htmlFor="fileInput" className={styles.uploadImageButton}>
           <AiOutlinePlus className={styles.plusIcon} /> Upload Image
           <input
@@ -99,12 +99,14 @@ const UploadImage: NextPage = () => {
         <div className={styles.buttonsContainer}>
           <button className={styles.dropboxButton}>
             <Dropbox>
-              <FaDropbox /> Dropbox
+              <FaDropbox />
+              <span className={styles.buttonText}>Dropbox</span>
             </Dropbox>
           </button>
           <button className={styles.googleDriveButton}>
             <GoogleDrive>
-              <FaGoogleDrive /> Google Drive
+              <FaGoogleDrive />
+              <span className={styles.buttonText}>Google Drive</span>
             </GoogleDrive>
           </button>
         </div>

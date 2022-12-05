@@ -97,7 +97,7 @@ const ModifyImage = ({ data, imgRef }: modifyTypes) => {
             src={data.imgPath ? data.imgPath : image}
             alt="Rotate Image"
             ref={imgRef}
-            className={styles.imageMirroring}
+            className={styles.imageRotating}
           />
         </div>
       </div>

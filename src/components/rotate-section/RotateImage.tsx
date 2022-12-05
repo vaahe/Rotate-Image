@@ -8,9 +8,7 @@ import CustomAngle from "./CustomAngle";
 const RotateImage = ({ data, onRotate, imgRef }: rotateTypes) => {
   const [angle, setAngle] = React.useState<number>(0);
 
-  React.useEffect(() => {
-    console.log(angle);
-  }, [angle]);
+  React.useEffect(() => {}, [angle]);
 
   const rotateLeft = () => {
     drawImage(imgRef, true, false, false);
@@ -44,8 +42,6 @@ const RotateImage = ({ data, onRotate, imgRef }: rotateTypes) => {
     const rotateL = rotateLeft ? -90 : 0;
     const rotateR = rotateRight ? 90 : 0;
     const rotateC = rotateCustom ? angle : 0;
-    const x = rotateLeft ? -image.width : 0;
-    const y = rotateRight ? -image.height : 0;
     canvas.width = image.width;
     canvas.height = image.height;
 
@@ -70,7 +66,6 @@ const RotateImage = ({ data, onRotate, imgRef }: rotateTypes) => {
       }
       onRotate({
         ...data,
-        // count: data.count + 1,
         imgPath: window.URL.createObjectURL(blob),
         rotateLeft: rotateLeft,
         rotateRight: rotateRight,
@@ -88,11 +83,11 @@ const RotateImage = ({ data, onRotate, imgRef }: rotateTypes) => {
       <div className={styles.rotateButtonsContainer}>
         <button className={styles.rotateButton} onClick={rotateLeft}>
           <GrRotateLeft className={styles.leftButton} />
-          <span>90&#176; Left</span>
+          <span className={styles.degree}>90&#176; Left</span>
         </button>
         <button className={styles.rotateButton} onClick={rotateRight}>
           <GrRotateRight className={styles.rightButton} />
-          <span>90&#176; Right</span>
+          <span className={styles.degree}>90&#176; Right</span>
         </button>
       </div>
       <CustomAngle

@@ -1,9 +1,9 @@
 .header {
- min-width: 100%;
+  width: 100%;
 }
 
 .main {
-  min-height: 100vh;
+  width: 100%;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,6 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
 }
 
 .footer a {
@@ -110,13 +109,6 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
 @media (prefers-color-scheme: dark) {
 
   .card,
@@ -130,5 +122,13 @@
 
   .logo img {
     filter: invert(1);
+  }
+}
+
+/* mobile */
+@media (min-width: 320px) and (max-width: 425px) {
+  .main {
+    min-width: 105vh;
+    padding: 24px 16px;
   }
 }

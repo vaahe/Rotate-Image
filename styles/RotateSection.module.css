@@ -4,3 +4,10 @@
     background: #e2e2e2;
     height: 592px;
 }
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .rotateSection {
+        flex-direction: column;
+        min-width: 130vh;
+    }
+}

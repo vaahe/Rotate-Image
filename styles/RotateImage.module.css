@@ -18,14 +18,9 @@
     align-items: flex-start;
     padding: 0px;
     gap: 12px;
-
     width: 400px;
     height: 97px;
-
     opacity: 0.5;
-
-    /* Inside auto layout */
-
     flex: none;
     order: 1;
     flex-grow: 0;
@@ -33,9 +28,6 @@
 
 .rotateButton {
     box-sizing: border-box;
-
-    /* Auto layout */
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,6 +83,25 @@
     color: #4C4C4C;
 }
 
-#canvas {
-    border: 1px solid red;
+@media (min-width: 320px) and (max-width: 425px) {
+    .toolsContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        min-height: 50vh;
+    }
+
+    .rotateButtonsContainer {
+        width: 100%;
+    }
+
+    .rotateButton {
+        width: 48%;
+        min-height: 25vh;
+    }
+
+    .rotateButton>svg {
+        width: 64px;
+        height: 64px;
+    }
 }

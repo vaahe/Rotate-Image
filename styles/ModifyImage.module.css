@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 .miniTools {
@@ -68,7 +69,7 @@
     display: none;
 }
 
-.imageMirroring {
+.imageRotating {
     max-width: 780px;
     max-height: 520px;
     object-fit: contain;
@@ -151,9 +152,6 @@
     gap: 8px;
     width: 670px;
     height: 48px;
-    /* position: absolute;
-    left: 145px;
-    top: 147px; */
     background: #158380;
     box-shadow: 0px 4px 16px rgba(17, 18, 54, 0.16);
     border-radius: 12px;
@@ -172,74 +170,6 @@
 .msgPart {
     display: flex;
     justify-content: center;
-}
-
-@media (max-width: 700px) {
-    .modify {
-        flex-direction: column;
-    }
-
-    .modifyPart {
-        width: 100%;
-        padding: 24px;
-        box-sizing: border-box;
-    }
-
-    .processing {
-        width: 150px;
-        height: initial;
-    }
-
-    .loaderPart {
-        width: 135px;
-        height: 190px;
-    }
-
-    .designLoader {
-        top: 0;
-        right: 0;
-    }
-
-    .imageSuccess {
-        display: flex;
-        justify-content: center;
-    }
-
-    .settingsPart {
-        width: 100%;
-        padding: 16px;
-        height: inherit;
-        box-sizing: border-box;
-    }
-
-    .toolsMenu {
-        height: inherit;
-        align-items: flex-start;
-    }
-
-    .flipHorizontal,
-    .flipVertical {
-        width: 44vw;
-        margin-bottom: 24px;
-    }
-
-    .shareImage,
-    .downloadImage {
-        gap: 8px;
-        padding: 12px 23px;
-        font-weight: 500;
-        justify-content: center;
-    }
-
-    .downloadImage {
-        width: 44vw;
-    }
-
-    .imageMirroring {
-        max-width: 90%;
-        max-height: 520px;
-        object-fit: contain;
-    }
 }
 
 .imageContainer {
@@ -264,4 +194,41 @@
 
 .closeIcon:hover {
     color: #aaa6a6;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .imageModifyingContainer {
+        min-width: 130vh;
+        min-height: 150vw;
+    }
+
+    .imageRotating {
+        width: 100vw;
+    }
+
+    .imageSuccess {
+        font-size: 32px;
+        line-height: 32px;
+        height: 72px;
+    }
+
+    .successIcon,
+    .closeIcon {
+        font-size: 64px;
+    }
+
+    .miniTools {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+    }
+
+    .miniTools>button>svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .processingText {
+        font-size: 38px;
+    }
 }

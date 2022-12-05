@@ -20,7 +20,7 @@
     height: 40px;
     flex: none;
     order: 1;
-    flex-grow: 0
+    flex-grow: 0;
 }
 
 .shareIcon {
@@ -35,7 +35,6 @@
 }
 
 .searchBar {
-    position: relative;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -114,4 +113,70 @@
     margin-left: 0.5rem;
     color: #C209C1;
     font-size: 18px;
+}
+
+.logo {
+    width: 100%;
+}
+
+.burgerMenu {
+    display: none;
+}
+
+/* mobile */
+@media (min-width: 320px) and (max-width: 425px) {
+    .header {
+        min-width: 100vh;
+    }
+
+    .navLink>li {
+        margin: 0 .2rem;
+    }
+
+    .burgerMenu {
+        min-width: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .leftTools,
+    .headerRightTools {
+        display: none;
+    }
+
+    .logo {
+        height: 58px;
+    }
+
+    .shareIcon {
+        font-size: 32px;
+    }
+}
+
+/* tablet */
+@media (min-width: 426px) and (max-width: 768px) {
+
+    .navLink>li {
+        margin: 0 .2rem;
+    }
+
+    .header {
+        min-width: 100vh;
+    }
+}
+
+/* laptop */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logo {
+        width: 50%;
+    }
+
+    .navLink>li {
+        margin: 0;
+    }
+
+    .header {
+        min-width: 100vh;
+    }
 }
